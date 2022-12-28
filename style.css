@@ -86,11 +86,12 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slider-back 0.3s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slider-in 0.4s forwards;
 }
 
 #switch span {
@@ -102,6 +103,10 @@ body * {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 /* Listas / Links*/
@@ -171,5 +176,23 @@ footer {
   }
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slider-in {
+  from{
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slider-back {
+  from{
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
