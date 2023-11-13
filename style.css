@@ -80,7 +80,7 @@ body * {
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
-  
+
   position: absolute;
   top: 50%;
   left: 0;
@@ -171,16 +171,16 @@ footer {
 /* media queries */
 
 @media (min-width: 700px) {
-  :root { 
-    --bg-url: var(./assets/bg-desktop.jpg);
+  :root {
+    --bg-url: var(./assets/bg-dark.jpg);
   }
   .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
+    --bg-url: var(./assets/bg-light.jpg);
   }
 }
 
 @keyframes slider-in {
-  from{
+  from {
     left: 0;
   }
   to {
@@ -189,7 +189,7 @@ footer {
 }
 
 @keyframes slider-back {
-  from{
+  from {
     left: 50%;
   }
   to {
